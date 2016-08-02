@@ -15,4 +15,7 @@ class MorseLatinTranslator:
     def to_morse(self, l):
         return '|'
 
+    def to_latin(self, m):
+        return ' '
+
 
