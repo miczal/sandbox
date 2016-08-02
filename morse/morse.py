@@ -10,4 +10,5 @@ class MorseLatinTranslator:
     """
     def __init__(self):
         self.latin_separator = ' '
+        self.morse_separator = '|'
 
