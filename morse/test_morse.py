@@ -13,3 +13,7 @@ class MorseLatinTranslatorTest(unittest.TestCase):
     def test_morse_separator_should_be_vertical_line(self):
         self.assertEqual(self.t.morse_separator, '|')
 
+    def test_translation_of_latin_separator(self):
+        self.assertEqual(t.to_morse(' '), '|')
+
+
