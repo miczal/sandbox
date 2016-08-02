@@ -22,3 +22,6 @@ class MorseLatinTranslatorTest(unittest.TestCase):
 
     def test_morse_to_latin_translation_of_a_single_letter_B(self):
         self.assertEqual(self.t.to_latin('-...'), 'B')
+
+    def test_latin_to_morse_translation_of_a_single_letter_B(self):
+        self.assertEqual(self.t.to_morse('B'), '-...')
