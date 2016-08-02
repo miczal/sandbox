@@ -22,3 +22,9 @@ class MorseLatinTranslatorTest(unittest.TestCase):
 
     def test_morse_to_latin_translation_of_a_single_letter_A_with_separator(self):
         self.assertEqual(self.t.to_latin('|.-|'), 'A')
+
+    def test_morse_to_latin_sos_translation(self):
+        self.assertEqual(self.t.to_latin('|...|---|...|'), 'SOS')
+
+    def test_morse_to_latin_key_error(self):
+        self.assertRaises(KeyError, self.t.to_latin('|...|---|.x.|'))

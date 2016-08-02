@@ -31,7 +31,12 @@ class MorseLatinTranslator:
         return self.latin_to_morse[l]
 
     def to_latin(self, m):
-        return self.morse_to_latin[''.join(m.split(self.morse_separator))]
+        letters = [l for l in m.split(self.morse_separator) if l != '']
+        try:
+            return ''.join(map(self.morse_to_latin.__getitem__, letters))
+        except KeyError as e:
+            print("Invalid character " + str(e))
+
 
 
 
