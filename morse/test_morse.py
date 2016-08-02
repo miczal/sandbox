@@ -28,3 +28,16 @@ class MorseLatinTranslatorTest(unittest.TestCase):
 
     def test_morse_to_latin_key_error(self):
         self.assertRaises(KeyError, self.t.to_latin('|...|---|.x.|'))
+
+    def test_latin_to_morse_translation_of_a_single_letter_A_with_separator(self):
+        self.assertEqual(self.t.to_morse('A'), '.-')
+
+    def test_latin_to_morse_sos_translation(self):
+        self.assertEqual(self.t.to_morse('sOs'), '...|---|...')
+
+    def test_latin_to_morse_key_error(self):
+        self.assertRaises(KeyError, self.t.to_latin('ł'))
+
+    def test_equilibrium_of_translation(self):
+        s = "RANDOMSTRING"
+        self.assertEqual(self.t.to_latin(self.t.to_morse(s)), s)
