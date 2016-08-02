@@ -8,5 +8,6 @@ class MorseLatinTranslator:
     - Spaces between latin words are 'lost in translation'
     - Latin characters translated from morse will be upper case
     """
-    pass
+    def __init__(self):
+        self.latin_separator = ' '
 

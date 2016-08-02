@@ -1,5 +1,5 @@
 import unittest
-from morse.morse import MorseLatinTranslator
+from morse import MorseLatinTranslator
 
 
 class MorseLatinTranslatorTest(unittest.TestCase):
