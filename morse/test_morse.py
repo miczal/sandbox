@@ -1,6 +1,10 @@
 import unittest
+from morse.morse import MorseLatinTranslator
 
 
-class MorseTest(unittest.TestCase):
-    def test_for_a_good_start(self):
-        pass
+class MorseLatinTranslatorTest(unittest.TestCase):
+
+    def test_latin_separator_should_be_space(self):
+        t = MorseLatinTranslator()
+        self.assertEqual(t.latin_separator, ' ')
+
