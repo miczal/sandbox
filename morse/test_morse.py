@@ -14,6 +14,6 @@ class MorseLatinTranslatorTest(unittest.TestCase):
         self.assertEqual(self.t.morse_separator, '|')
 
     def test_translation_of_latin_separator(self):
-        self.assertEqual(t.to_morse(' '), '|')
+        self.assertEqual(self.t.to_morse(' '), '|')
 
 

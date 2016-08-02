@@ -12,3 +12,7 @@ class MorseLatinTranslator:
         self.latin_separator = ' '
         self.morse_separator = '|'
 
+    def to_morse(self, l):
+        return '|'
+
+
