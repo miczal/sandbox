@@ -1,3 +1,4 @@
+import string
 
 class MorseLatinTranslator:
     """
@@ -11,6 +12,7 @@ class MorseLatinTranslator:
     def __init__(self):
         self.latin_separator = ' '
         self.morse_separator = '|'
+        self.latin_characters = string.digits + string.ascii_uppercase + self.latin_separator
 
 
     def to_morse(self, l):

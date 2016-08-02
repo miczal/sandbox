@@ -15,4 +15,7 @@ class MorseLatinTranslatorTest(unittest.TestCase):
         self.assertEqual(self.t.to_latin('|'), ' ')
 
     def test_latin_to_morse_dict_len(self):
-        self.assertEqual(len(self.t.latin_letters), len(string.digits + string.ascii_uppercase + ' '))
+        self.assertEqual(len(self.t.latin_characters), len(string.digits + string.ascii_uppercase + ' '))
+
+    def test_morse_dict_len_should_be_the_same_as_latin(self):
+        self.assertEqual(len(self.t.latin_characters), len(t.morse_characters))
